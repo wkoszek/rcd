@@ -1,4 +1,4 @@
-script: make test && make check
+script: make tests && make check
 language: c
 compiler:
         - clang
