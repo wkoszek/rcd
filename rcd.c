@@ -41,9 +41,9 @@
  * Sample usage of this simple program.
  */
 static void
-usage(void)
+usage(const char *progname)
 {
-	fprintf(stderr, "%s inputfile\n", getprogname());
+	fprintf(stderr, "%s inputfile\n", progname);
 	exit(EX_USAGE);
 }
 
@@ -169,7 +169,7 @@ main (int argc, char **argv)
 	struct stat st;
 
 	if (argc < 2)
-		usage();
+		usage(argv[0]);
 	fin = open(argv[1], O_RDONLY);
 	if (fin == -1)
 		err(EXIT_FAILURE, "Couldn't open file %s\n", argv[1]);
