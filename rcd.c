@@ -25,6 +25,9 @@
  *
  * $Id$
  */
+
+#define _GNU_SOURCE
+
 #include <sys/types.h>
 #include <sys/stat.h>
 
@@ -198,14 +201,14 @@ main (int argc, char **argv)
 				}
 			}
 			r = sscanf(strdup(ap), "%d.%d.%d.%d", &ip0, &ip1, &ip2, &ip3);
-#if 0
+if (0) {
 			if (tab)
 				printf("\t%s", ap);
 			else if (buf == NULL)
 				printf("%s", ap);
 			else
 				printf("%s ", ap);
-#endif
+}
 			if (r == 4) {
 				isnew = ipfind(ip0, ip1, ip2, ip3);
 				if (isnew == NULL)
