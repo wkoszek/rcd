@@ -19,3 +19,8 @@ Sample test data is in test/. To run tests, run:
 
 	make tests
 	make check
+
+# Author
+
+- Wojciech Adam Koszek, [wojciech@koszek.com](mailto:wojciech@koszek.com)
+- [http://www.koszek.com](http://www.koszek.com)
